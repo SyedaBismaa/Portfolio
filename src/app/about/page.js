@@ -12,8 +12,9 @@ const About = () => {
            <div  className='h-4 w-4 bg-gray-500 rounded-full mt-4'></div>
      </div>
 
-     <div className='mt-5  bg-red-400'>
-       <p>lorem35 njkdshicsiuyd joidv knlnd hicsiuyd joidv knlnd jiow jid jiods jdios ijhicsiuyd joidv knlnd jiow jid jiods jdios ijhicsiuyd joidv knlnd jiow jid jiods jdios ij jiow jid jiods jdios ijioe kijdio ihewioiduso</p>
+     <div className='mt-15  bg-red-400'>
+         <h1 className='flex justify-center items-center text-4xl'> [ I design & build experiences ] </h1>
+         <p className='mt-8 px-66 flex items-center justify-center'>Crafting seamless digital journeys that captivate users. Delivering innovative solutions that combine creativity with  functionality. Ensuring intuitive interfaces that enhance user interaction and satisfaction. Bridging the gap between design and development to create memorable web experiences. Passionate about transforming ideas into visually appealing and efficient digital platforms.</p>
      </div>
 
       

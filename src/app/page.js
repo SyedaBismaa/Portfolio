@@ -3,51 +3,55 @@ import React from 'react'
 import mine from "/public/mine.jpg"
 import Navbar from '@/componanats/Navbar'
 import { MoveRight } from 'lucide-react'
-import Link from 'next/link'
 import About from './about/page'
 
 const Page = () => {
   return (
-    <div className='text-xl flex justify-center  flex-col'>
+    <div className='text-base sm:text-xl flex flex-col justify-center items-center'>
       <Navbar />
 
-      <div className='section1 flex justify-around   p-10 h-[80vh] w-full mt-6 '>
+      <div className='section1 flex flex-col md:flex-row justify-around p-6 md:p-10 h-auto md:h-[80vh] w-full mt-6'>
 
         {/* Left Section */}
-        <div className='left flex flex-col gap-3 pt-20 p-5 h-full  w-[50%]'>
+        <div className='left flex flex-col gap-3 pt-10 md:pt-20 p-3 md:p-5 w-full md:w-[50%]'>
 
-          <h3 className='text-3xl  font-medium'>Hi There 👋</h3>
-          <div className='h-2 w-20 rounded bg-yellow-300'></div>
+          <h3 className='text-2xl sm:text-3xl font-medium'>Hi There 👋</h3>
+          <div className='h-1 w-16 sm:w-20 rounded bg-yellow-300'></div>
 
-          <h1 className='text-5xl font-semibold'>
+          <h1 className='text-3xl sm:text-5xl font-semibold'>
             I’m Syeda Bisma
           </h1>
 
-          <div className='text-xl w-[65%] rounded-full mt-3  py-1 px-2 border-dotted border-2 border-black text-blue-900'>
+         {/* Desktop / Tablet */}
+      <div className='hidden sm:block text-base sm:text-xl w-full sm:w-[65%] rounded-full mt-3 py-1 px-2 border-dotted border-2 border-black text-blue-900 text-center'>
           Building creative & user-focused digital experiences
-          </div>
+        </div>
 
-          <div>
-            <p className=' leading-relaxed mt-4'>
-              I love crafting clean, responsive, and visually appealing web
-              interfaces using React, Next.js, and Tailwind CSS. My focus is on
-              creating smooth user experiences that combine creativity and logic.
-            </p>
-          </div>
+{/* Mobile */}
+            <div className='block sm:hidden text-base w-full rounded-full mt-3 py-1 px-2 border-dotted border-2 border-black text-blue-900 text-center'>
+             Frontend Developer || Design Engineer
+            </div>
 
-         <button className="border w-1/4 text-xl rounded-2xl py-1 px-4 font-medium mt-5 flex items-center gap-2">
-           Contact Me
-          <MoveRight size={20} strokeWidth={1.8} />
-        </button>
+
+          <p className='leading-relaxed mt-4 text-gray-700'>
+            I love crafting clean, responsive, and visually appealing web
+            interfaces using React, Next.js, and Tailwind CSS. My focus is on
+            creating smooth user experiences that combine creativity and logic.
+          </p>
+
+          <button className="border w-1/2 sm:w-1/4 text-base sm:text-xl rounded-2xl py-1 px-4 font-medium mt-5 flex items-center justify-center gap-2">
+            Contact Me
+            <MoveRight size={20} strokeWidth={1.8} />
+          </button>
         </div>
 
         {/* Right Section */}
-        <div className='right h-full w-[40%] flex justify-center items-center overflow-hidden '>
-          <div className='large h-[80%] w-[80%] rounded-full border-2 flex justify-center items-center mt-10'>
+        <div className='right h-auto md:h-full w-full md:w-[40%] flex justify-center items-center overflow-hidden mt-10 md:mt-0'>
+          <div className='large h-[60vw] max-h-[400px] md:h-[80%] w-[80%] rounded-full border-2 flex justify-center items-center'>
             <div className='img h-[90%] w-[90%] rounded-full overflow-hidden'>
               <Image
-                height={100}
-                width={100}
+                height={400}
+                width={400}
                 src={mine}
                 alt="Syeda Bisma"
                 className='object-cover h-full w-full'
@@ -58,7 +62,7 @@ const Page = () => {
 
       </div>
 
-      <div className='mt-10'>
+      <div className='mt-10 w-full px-4 md:px-16'>
        <About/>
       </div>
     </div>
