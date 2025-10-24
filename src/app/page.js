@@ -2,15 +2,16 @@ import Image from 'next/image'
 import React from 'react'
 import mine from "/public/mine.jpg"
 import Navbar from '@/componanats/Navbar'
-import { MoveRight } from 'lucide-react'
+import {  MoveRight  } from 'lucide-react'
 import About from './about/page'
+import Projects from './projects/page'
+import Link from 'next/link'
 
 const Page = () => {
   return (
     <div className='text-base sm:text-xl flex flex-col justify-center items-center'>
-      <Navbar />
 
-      <div className='section1 flex flex-col md:flex-row justify-around p-6 md:p-10 h-auto md:h-[80vh] w-full mt-6'>
+      <div className='section1 flex flex-col md:flex-row justify-around p-6 md:p-10 h-auto md:h-[70vh] w-full mt-6'>
 
         {/* Left Section */}
         <div className='left flex flex-col gap-3 pt-10 md:pt-20 p-3 md:p-5 w-full md:w-[50%]'>
@@ -64,6 +65,10 @@ const Page = () => {
 
       <div className='mt-10 w-full px-4 md:px-16'>
        <About/>
+      </div>
+      <div className='mt-10 w-full px-4 md:px-16'>
+     <Projects limit={3}/>
+      <Link  href="/projects" className='flex text-2xl underline justify-center items-center gap-4'>View More <MoveRight size={25} strokeWidth={1.8}/> </Link>
       </div>
     </div>
   )
