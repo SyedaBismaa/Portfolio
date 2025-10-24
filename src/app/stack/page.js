@@ -3,7 +3,7 @@ import React from "react";
 
 const TechStack = () => {
   const techLogos = [
-    "/htmlcssjs.png",
+    "/skills/htmlcssjs.png",
     "/skills/react.png",
     "/skills/nextjs.png",
     "/skills/tailwind.png",

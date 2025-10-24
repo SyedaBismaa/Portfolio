@@ -28,28 +28,28 @@ const About = () => {
           <Image
             height={60}
             width={70}
-            src="/html.png"
+            src="/projectsimg/html.png"
             alt="HTML"
             className="absolute left-[5rem] lg:left-[14rem] top-4 lg:top-0"
           />
           <Image
             height={60}
             width={70}
-            src="/css.png"
+            src="/projectsimg/css.png"
             alt="CSS"
             className="absolute right-[5rem] lg:right-[10rem] top-4 lg:top-0"
           />
           <Image
             height={60}
             width={70}
-            src="/js.png"
+            src="/projectsimg/js.png"
             alt="JavaScript"
             className="absolute right-[5rem] lg:right-[10rem] top-36 lg:top-50"
           />
           <Image
             height={60}
             width={70}
-            src="/vscode.png"
+            src="/projectsimg/vscode.png"
             alt="VSCode"
             className="absolute left-[5rem] lg:left-[10rem] top-36 lg:top-50"
           />
