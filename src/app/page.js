@@ -6,6 +6,7 @@ import {  MoveRight  } from 'lucide-react'
 import About from './about/page'
 import Projects from './projects/page'
 import Link from 'next/link'
+import TechStack from './stack/page'
 
 const Page = () => {
   return (
@@ -69,6 +70,9 @@ const Page = () => {
       <div className='mt-10 w-full px-4 md:px-16'>
      <Projects limit={3}/>
       <Link  href="/projects" className='flex text-2xl underline justify-center items-center gap-4'>View More <MoveRight size={25} strokeWidth={1.8}/> </Link>
+      </div>
+      <div className='mt-10 w-full px-4 md:px-16'>
+       <TechStack/>
       </div>
     </div>
   )

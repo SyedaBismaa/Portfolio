@@ -2,79 +2,77 @@ import Image from "next/image";
 import React from "react";
 
 const projects = [
-      {
-  id: 1,
-  title: "Beyond Snack",
-  desc: "A visually rich, high-performance landing page for a banana chips brand — built with React.js, Tailwind CSS, GSAP, Framer Motion, and Lenis for smooth scroll-based animations, micro-interactions, and a premium user experience.",
-  tech: ["React.js", "Tailwind CSS", "GSAP", "Framer Motion", "Lenis"],
-  img: "/beyondsnak2.png",
-  live: "https://beyond-snack-v1tv.vercel.app/",
-  github: "#",
-},
-    {
+  {
+    id: 1,
+    title: "Beyond Snack",
+    desc: "A visually rich, high-performance landing page for a banana chips brand — built with React.js, Tailwind CSS, GSAP, Framer Motion, and Lenis for smooth scroll-based animations, micro-interactions, and a premium user experience.",
+    tech: ["React.js", "Tailwind CSS", "GSAP", "Framer Motion", "Lenis"],
+    img: "/projectsimg/beyondsnak2.png",
+    live: "https://beyond-snack-v1tv.vercel.app/",
+    github: "https://github.com/SyedaBismaa/Beyond_Snack.git",
+  },
+  {
     id: 2,
-    title: "Recipe App",
+    title: "Food Delight",
     desc: "A visually appealing recipe explorer built with React.js, GSAP, and Tailwind CSS. It features smooth animations, interactive UI elements, and dynamic recipe cards for a delightful user experience.",
     tech: ["React.js", "Tailwind CSS", "GSAP"],
-    img: "/recipe.png",
+    img: "/projectsimg/recipe.png",
     live: "https://recipes-sigma-two.vercel.app/",
-    github: "#",
+    github: "https://github.com/SyedaBismaa/Food-Delight.git",
   },
-
- {
+  {
     id: 3,
     title: "Konvox",
     desc: "An advanced GPT clone that lets users chat with an AI assistant in real time. Features include conversation history, clean UI, and OpenAI API integration for intelligent responses.",
-    tech: ["React.js", "Node.js", "gemini API","pinecone &  Mongodb", "Socket.io"],
-    img: "/konvox.png",
+    tech: ["React.js", "Node.js", "Gemini API", "Pinecone", "MongoDB", "Socket.io"],
+    img: "/projectsimg/konvox.png",
     live: "https://chat-gpt-clone-eta-silk.vercel.app/",
-    github: "#",
+    github: "https://github.com/SyedaBismaa/ChatGpt_Clone.git",
   },
-   {
+  {
     id: 4,
-    title: "MoodMelody",
-    desc: "AI-powered music player that curates playlists based on user mood.",
-    tech: ["React", "Express", "MongoDB", "Tailwind"],
-    img: "/moodmelody.png",
-    live: "https://mood-melody-bice.vercel.app/",
-    github: "#",
-  },
-   {
-    id: 5,
-    title: "Coffeo",
-    desc: "A premium coffee brand landing page built from scratch using HTML, SCSS, and JavaScript. Designed with elegant typography, rich visuals, and smooth scroll-based animations.",
-    tech: ["HTML", "SCSS", "JavaScript"],
-    img: "/coffeo.png",
-    live: "https://syedabismaa.github.io/COFFEO/",
-    github: "#",
-  },
-    {
-    id: 6,
     title: "SnapCap",
     desc: "AI-based caption generator for your pictures.",
     tech: ["Next.js", "OpenAI API", "Cloudinary"],
-    img: "/snapcap.png",
+    img: "/projectsimg/snapcap.png",
     live: "https://snapcap.vercel.app/",
-    github: "#",
+    github: "https://github.com/SyedaBismaa/Snapcap-your-buddy-for-captions.git",
   },
-
-{
-  id: 7,
-  title: "GitSeeker",
-  desc: "A small, functional app to search for GitHub users in real-time. Enter a username and instantly get profile data including bio, repos, and followers. Built using HTML, Tailwind CSS, and JavaScript.",
-  tech: ["HTML", "Tailwind CSS", "JavaScript"],
-  img: "/gitseeker.png", // add a screenshot in public/projects/
-  live: "https://lnkd.in/gjmmzPuy",
-  github: "https://lnkd.in/gCsPEKNt",
-}
-
+  {
+    id: 5,
+    title: "MoodMelody",
+    desc: "AI-powered music player that curates playlists based on user mood.",
+    tech: ["React", "Express", "MongoDB", "Tailwind"],
+    img: "/projectsimg/moodmelody.png",
+    live: "https://mood-melody-bice.vercel.app/",
+    github: "https://github.com/SyedaBismaa/MoodMelody.git",
+  },
+  {
+    id: 6,
+    title: "Coffeo",
+    desc: "A premium coffee brand landing page built from scratch using HTML, SCSS, and JavaScript. Designed with elegant typography, rich visuals, and smooth scroll-based animations.",
+    tech: ["HTML", "SCSS", "JavaScript"],
+    img: "/projectsimg/coffeo.png",
+    live: "https://syedabismaa.github.io/COFFEO/",
+    github: "https://github.com/SyedaBismaa/COFFEO.git",
+  },
+  {
+    id: 7,
+    title: "GitSeeker",
+    desc: "A small, functional app to search for GitHub users in real-time. Enter a username and instantly get profile data including bio, repos, and followers. Built using HTML, Tailwind CSS, and JavaScript.",
+    tech: ["HTML", "Tailwind CSS", "JavaScript"],
+    img: "/projectsimg/gitseeker.png",
+    live: "https://lnkd.in/gjmmzPuy",
+    github: "https://github.com/SyedaBismaa/GitSeeker.git",
+  },
 ];
 
 const Projects = ({ limit }) => {
   const visibleProjects = limit ? projects.slice(0, limit) : projects;
 
   return (
-    <section className=" py-16 px-6 md:px-16">
+    <section className="py-16 px-6 md:px-16">
+      {/* Title */}
       <div className="flex flex-col md:flex-row items-center gap-3 mb-12">
         <h1 className="text-4xl md:text-5xl font-bold text-gray-800">Projects</h1>
         <div className="hidden md:flex w-[70%] h-1 rounded bg-gray-700 ml-3 mt-2 md:mt-4"></div>
@@ -88,19 +86,21 @@ const Projects = ({ limit }) => {
             key={proj.id}
             className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden"
           >
-            <div className="relative h-48 md:h-56 overflow-hidden">
+            {/* Project Image */}
+            <div className="relative w-full h-52 sm:h-60 md:h-64 lg:h-72 overflow-hidden rounded-t-2xl">
               <Image
                 src={proj.img}
                 alt={proj.title}
-                layout="fill"
-                objectFit="cover"
-                className="group-hover:scale-110 transition-transform duration-500"
+                 fill
+                className="object-cover transition-transform duration-500 group-hover:scale-110"
               />
             </div>
 
+            {/* Project Info */}
             <div className="p-6">
               <h2 className="text-2xl font-semibold mb-2 text-gray-800">{proj.title}</h2>
               <p className="text-gray-600 text-sm mb-4">{proj.desc}</p>
+
               <div className="flex flex-wrap gap-2 mb-4">
                 {proj.tech.map((t, i) => (
                   <span
@@ -111,6 +111,7 @@ const Projects = ({ limit }) => {
                   </span>
                 ))}
               </div>
+
               <div className="flex gap-3">
                 <a
                   href={proj.live}
