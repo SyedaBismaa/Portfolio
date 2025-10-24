@@ -10,6 +10,7 @@ const TechStack = () => {
     "/skills/expre.png",
     "/skills/node.png",
     "/skills/mongodb.png",
+    "/skills/soketio.png",
     "/skills/typescri.png",
     "/skills/gsap.png",
     "/skills/git.png",
