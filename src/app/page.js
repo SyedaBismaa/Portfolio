@@ -9,6 +9,7 @@ import Projects from "./projects/page";
 import TechStack from "./stack/page";
 import Conatct from "./contact/page";
 import Services from "./services/page";
+import Achive from "./achive/page";
 
 const Page = () => {
   return (
@@ -24,7 +25,7 @@ const Page = () => {
 
 
           <div className="hidden sm:block text-base sm:text-xl w-full sm:w-[65%] rounded-full mt-3 py-1 px-2 border-dotted border-2 border-black text-blue-900 text-center">
-            Building creative & user-focused digital experiences
+            Building creative digital experiences
           </div>
 
           <div className="block sm:hidden text-base w-full rounded-full mt-3 py-1 px-2 border-dotted border-2 border-black text-blue-900 text-center">
@@ -75,31 +76,45 @@ const Page = () => {
       </div>
 
       {/* ===== OTHER SECTIONS ===== */}
+      
       <div className="mt-10 w-full px-4 md:px-16">
+        <TechStack />
+      </div>     
+
+       <div className="mt-10 w-full px-4 md:px-16">
+        <Services />
+      </div> 
+
+         <div className="mt-10 w-full px-4 md:px-16">
         <About />
       </div>
 
       <div className="mt-10 w-full px-4 md:px-16">
+          
         <Projects limit={3} />
         <Link
           href="/projects"
-          className="flex text-2xl underline justify-center items-center gap-3 mt-4 hover:gap-5 transition-all"
+          className="flex text-xl underline justify-center items-center gap-3  hover:gap-5 transition-all"
         >
-          View More <MoveRight size={25} strokeWidth={1.8} />
+          View More Here <MoveRight size={25} strokeWidth={1.8} />
         </Link>
+        <div className=" border rounded border-gray-500 mt-8 flex gap-4 justify-center items-center text-xl ">
+         <Link href={"https://github.com/SyedaBismaa"}>View All Projects On Github </Link>
+         <Image height={40} width={40} src={"/skills/githubimg.png"} alt="Github"/>
+      </div>
+        
       </div>
 
+       {/* achivements */}
       <div className="mt-10 w-full px-4 md:px-16">
-        <TechStack />
+        <Achive/>
       </div>
-
-      <div className="mt-10 w-full px-4 md:px-16">
-        <Services />
-      </div>
+   
 
       <div className="mt-10 w-full px-4 md:px-16 mb-16">
         <Conatct />
       </div>
+
     </div>
   );
 };

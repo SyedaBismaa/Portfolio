@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const projects = [
@@ -49,15 +50,6 @@ const projects = [
   },
   {
     id: 6,
-    title: "Coffeo",
-    desc: "A premium coffee brand landing page built from scratch using HTML, SCSS, and JavaScript. Designed with elegant typography, rich visuals, and smooth scroll-based animations.",
-    tech: ["HTML", "SCSS", "JavaScript"],
-    img: "/projectsimg/coffeo.png",
-    live: "https://syedabismaa.github.io/COFFEO/",
-    github: "https://github.com/SyedaBismaa/COFFEO.git",
-  },
-  {
-    id: 7,
     title: "GitSeeker",
     desc: "A small, functional app to search for GitHub users in real-time. Enter a username and instantly get profile data including bio, repos, and followers. Built using HTML, Tailwind CSS, and JavaScript.",
     tech: ["HTML", "Tailwind CSS", "JavaScript"],
@@ -74,7 +66,7 @@ const Projects = ({ limit }) => {
     <section className="py-16 px-6 md:px-16">
       {/* Title */}
       <div className="flex flex-col md:flex-row items-center gap-3 mb-12">
-        <h1 className="text-4xl md:text-5xl font-bold text-gray-800">Projects</h1>
+        <h1 className="text-4xl md:text-4xl font-semibold text-gray-800">Projects</h1>
         <div className="hidden md:flex w-[70%] h-1 rounded bg-gray-700 ml-3 mt-2 md:mt-4"></div>
         <div className="hidden md:flex h-4 w-4 bg-gray-700 rounded-full mt-4"></div>
       </div>
@@ -129,9 +121,12 @@ const Projects = ({ limit }) => {
                 </a>
               </div>
             </div>
+          
           </div>
+          
         ))}
       </div>
+    
     </section>
   );
 };

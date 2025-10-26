@@ -31,13 +31,13 @@ const Services = () => {
 
 
   return (
-    <section className="py-16 px-6 md:px-16">
+    <section className="py-16 px-6 md:px-16 ">
       {/* Heading */}
       <div className="flex flex-col md:flex-row items-center gap-3 mb-12">
-        <h1 className="text-4xl md:text-5xl font-bold text-gray-800">
-          What I Do
+        <h1 className="text-4xl md:text-4xl font-semibold text-gray-800">
+         Area Of Expertise
         </h1>
-        <div className="hidden md:flex w-[70%] h-1 rounded bg-gray-700 ml-3 mt-2 md:mt-4"></div>
+        <div className="hidden md:flex w-[50%] h-1 rounded bg-gray-700 ml-3 mt-2 md:mt-4"></div>
         <div className="hidden md:flex h-4 w-4 bg-gray-700 rounded-full mt-4"></div>
       </div>
 

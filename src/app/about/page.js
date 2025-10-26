@@ -6,16 +6,9 @@ const About = () => {
     <div className=" mt-5 p-6 md:p-10">
 
       <div className="flex flex-col md:flex-row items-center md:items-start gap-3 md:pl-8">
-        <h1 className="text-3xl md:text-5xl ">About Me</h1>
+        <h1 className="text-3xl font-semibold text-gray-800 md:text-4xl ">About Me</h1>
         <div className="hidden md:flex w-[70%] h-1 rounded bg-gray-700 ml-3 mt-5"></div>
         <div className="hidden md:flex h-4 w-4 bg-gray-700 rounded-full mt-4"></div>
-      </div>
-
-      <div className="flex justify-center items-center gap-5 mt-6 flex-wrap md:hidden">
-        <Image height={45} width={45} src="/html.png" alt="HTML" />
-        <Image height={45} width={45} src="/css.png" alt="CSS" />
-        <Image height={45} width={45} src="/js.png" alt="JavaScript" />
-        <Image height={45} width={45} src="/vscode.png" alt="VSCode" />
       </div>
 
       <div className="mt-2 md:mt-20 rounded-xl p-6 relative overflow-hidden">
