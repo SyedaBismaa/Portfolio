@@ -1,3 +1,4 @@
+
 import Image from "next/image";
 import React from "react";
 import mine from "/public/mine.jpg";
@@ -11,8 +12,10 @@ import Conatct from "./contact/page";
 import Services from "./services/page";
 import Achive from "./achive/page";
 
+
 const Page = () => {
   return (
+
     <div className="text-base sm:text-xl flex flex-col justify-center items-center overflow-x-hidden">
 
       <div className="section1 flex flex-col md:flex-row justify-around items-center p-6 md:p-10 h-auto md:h-[70vh] w-full mt-6">
@@ -74,7 +77,7 @@ const Page = () => {
           </div>
         </div>
       </div>
-
+    
       {/* ===== OTHER SECTIONS ===== */}
       
       <div className="mt-10 w-full px-4 md:px-16">
@@ -116,6 +119,7 @@ const Page = () => {
       </div>
 
     </div>
+
   );
 };
 
