@@ -1,9 +1,10 @@
-
+"use client";
 import Image from "next/image";
 import React from "react";
 import mine from "/public/mine.jpg";
 import { MoveRight, Download } from "lucide-react";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 import About from "./about/page";
 import Projects from "./projects/page";
@@ -12,40 +13,80 @@ import Conatct from "./contact/page";
 import Services from "./services/page";
 import Achive from "./achive/page";
 
-
 const Page = () => {
   return (
-
-    <div className="text-base sm:text-xl flex flex-col justify-center items-center overflow-x-hidden">
-
+    <div className="text-base sm:text-xl flex flex-col justify-center items-center overflow-x-hidden  ">
+      {/* ===== HERO SECTION ===== */}
       <div className="section1 flex flex-col md:flex-row justify-around items-center p-6 md:p-10 h-auto md:h-[70vh] w-full mt-6">
-   
-        <div className="left flex flex-col gap-3 pt-10 md:pt-20 p-3 md:p-5 w-full md:w-[50%]">
-          <h3 className="text-2xl sm:text-3xl font-medium">Hi There 👋</h3>
-          <div className="h-1 w-16 sm:w-20 rounded bg-yellow-300"></div>
+        {/* LEFT SIDE */}
+        <motion.div
+          initial={{ opacity: 0, x: -80 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+          className="left flex flex-col gap-3 pt-10 md:pt-20 p-3 md:p-5 w-full md:w-[50%]"
+        >
+          <motion.h3
+            initial={{ y: -30, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.2, duration: 0.8 }}
+            className="text-2xl sm:text-3xl font-medium"
+          >
+            Hi There 👋
+          </motion.h3>
+          <motion.div
+            className="h-1 w-16 sm:w-20 rounded bg-yellow-300"
+            initial={{ scaleX: 0 }}
+            animate={{ scaleX: 1 }}
+            transition={{ delay: 0.4, duration: 0.6 }}
+          ></motion.div>
 
-          <h1 className="text-3xl sm:text-5xl font-semibold">I’m Syeda Bisma</h1>
+          <motion.h1
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.6, duration: 0.8 }}
+            className="text-3xl sm:text-5xl font-semibold "
+          >
+            I’m Syeda Bisma
+          </motion.h1>
 
-
-          <div className="hidden sm:block text-base sm:text-xl w-full sm:w-[65%] rounded-full mt-3 py-1 px-2 border-dotted border-2 border-black text-blue-900 text-center">
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1, duration: 0.8 }}
+            className="hidden sm:block text-base sm:text-xl w-full sm:w-[65%] rounded-full mt-3 py-1 px-2 border-dotted border border-gray-400 text-blue-500 text-center shadow-md backdrop-blur-sm"
+          >
             Building creative digital experiences
-          </div>
+          </motion.div>
 
-          <div className="block sm:hidden text-base w-full rounded-full mt-3 py-1 px-2 border-dotted border-2 border-black text-blue-900 text-center">
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1, duration: 0.8 }}
+            className="block sm:hidden text-base w-full rounded-full mt-3 py-1 px-2 border border-dotted border-gray-400 text-blue-500 text-center shadow-md backdrop-blur-sm"
+          >
             Frontend Developer || Design Engineer
-          </div>
+          </motion.div>
 
-          <p className="leading-relaxed mt-4 text-gray-700">
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1.2, duration: 0.8 }}
+            className="leading-relaxed mt-4"
+          >
             I love crafting clean, responsive, and visually appealing web
             interfaces using React, Next.js, and Tailwind CSS. My focus is on
             creating smooth user experiences that combine creativity and logic.
-          </p>
+          </motion.p>
 
-       
-          <div className="flex flex-col sm:flex-row gap-4 mt-6">
+          <motion.div
+            className="flex flex-col sm:flex-row gap-4 mt-6"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1.4, duration: 0.8 }}
+          >
             <Link
               href="/contact"
-              className="border border-gray-800 w-full sm:w-1/3 text-base sm:text-lg rounded-2xl py-2 px-4 font-medium flex items-center justify-center gap-2 hover:bg-gray-800 hover:text-white transition-all duration-300"
+              className="border border-gray-500 w-full sm:w-1/3 text-base sm:text-lg rounded-2xl py-2 px-4 font-medium flex items-center justify-center gap-2 bg-transparent hover:bg-gray-900 hover:text-white hover:scale-105 transition-all duration-300"
             >
               Contact Me
               <MoveRight size={20} strokeWidth={1.8} />
@@ -54,17 +95,26 @@ const Page = () => {
             <a
               href="/Resume/Resume2.pdf"
               download="Resume2.pdf"
-              className="border border-gray-800 w-full sm:w-1/3 text-base sm:text-lg rounded-2xl py-2 px-4 font-medium flex items-center justify-center gap-2 hover:bg-blue-600 hover:text-white transition-all duration-300"
+              className="border border-gray-500 w-full sm:w-1/3 text-base sm:text-lg rounded-2xl py-2 px-4 font-medium flex items-center justify-center gap-2 bg-transparent hover:bg-gray-900  hover:text-white hover:scale-105 transition-all duration-300"
             >
               Download Resume
               <Download size={20} strokeWidth={1.8} />
             </a>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
-        {/* Right Section */}
-        <div className="right h-auto md:h-full w-full md:w-[40%] flex justify-center items-center overflow-hidden mt-10 md:mt-0">
-          <div className="large h-[60vw] max-h-[400px] md:h-[80%] w-[80%] rounded-full border-2 flex justify-center items-center shadow-lg hover:scale-105 transition-all duration-300">
+        {/* RIGHT SIDE */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8, y: 50 }}
+          animate={{ opacity: 1, scale: 1, y: 0 }}
+          transition={{ delay: 0.8, duration: 1 }}
+          className="right h-auto md:h-full w-full md:w-[40%] flex justify-center items-center overflow-hidden mt-10 md:mt-0"
+        >
+          <motion.div
+            whileHover={{ scale: 1.05, rotate: 2 }}
+            transition={{ type: "spring", stiffness: 200 }}
+            className="large h-[60vw] max-h-[400px] md:h-[80%] w-[80%] rounded-full border-2 border-gray-600 flex justify-center items-center shadow-[0_0_40px_-10px_rgba(255,255,255,0.4)]"
+          >
             <div className="img h-[90%] w-[90%] rounded-full overflow-hidden">
               <Image
                 height={400}
@@ -74,52 +124,79 @@ const Page = () => {
                 className="object-cover h-full w-full"
               />
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
-    
+
       {/* ===== OTHER SECTIONS ===== */}
-      
-      <div className="mt-10 w-full px-4 md:px-16">
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+        className="mt-10 w-full px-4 md:px-16"
+      >
         <TechStack />
-      </div>     
+      </motion.div>
 
-       <div className="mt-10 w-full px-4 md:px-16">
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+        className="mt-10 w-full px-4 md:px-16"
+      >
         <Services />
-      </div> 
+      </motion.div>
 
-         <div className="mt-10 w-full px-4 md:px-16">
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+        className="mt-10 w-full px-4 md:px-16"
+      >
         <About />
-      </div>
+      </motion.div>
 
-      <div className="mt-10 w-full px-4 md:px-16">
-          
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+        className="mt-10 w-full px-4 md:px-16"
+      >
         <Projects limit={3} />
         <Link
           href="/projects"
-          className="flex text-xl underline justify-center items-center gap-3  hover:gap-5 transition-all"
+          className="flex text-xl underline justify-center items-center gap-3 hover:gap-5 transition-all mt-2"
         >
           View More Here <MoveRight size={25} strokeWidth={1.8} />
         </Link>
-        <div className=" border rounded border-gray-500 mt-8 flex gap-4 justify-center items-center text-xl ">
-         <Link href={"https://github.com/SyedaBismaa"}>View All Projects On Github </Link>
-         <Image height={40} width={40} src={"/skills/githubimg.png"} alt="Github"/>
-      </div>
-        
-      </div>
+        <div className="border rounded border-gray-600 mt-8 flex gap-4 justify-center items-center text-xl p-3">
+          <Link href={"https://github.com/SyedaBismaa"}>
+            View All Projects On Github{" "}
+          </Link>
+          <Image height={40} width={40} src={"/skills/githubimg.png"} alt="Github" />
+        </div>
+      </motion.div>
 
-       {/* achivements */}
-      <div className="mt-10 w-full px-4 md:px-16">
-        <Achive/>
-      </div>
-   
+      {/* Achievements */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+        className="mt-10 w-full px-4 md:px-16"
+      >
+        <Achive />
+      </motion.div>
 
-      <div className="mt-10 w-full px-4 md:px-16 mb-16">
+      {/* Contact */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+        className="mt-10 w-full px-4 md:px-16 mb-16"
+      >
         <Conatct />
-      </div>
-
+      </motion.div>
     </div>
-
   );
 };
 
