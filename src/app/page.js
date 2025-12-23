@@ -103,29 +103,6 @@ const Page = () => {
           </motion.div>
         </motion.div>
 
-        {/* RIGHT SIDE */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8, y: 50 }}
-          animate={{ opacity: 1, scale: 1, y: 0 }}
-          transition={{ delay: 0.8, duration: 1 }}
-          className="right h-auto md:h-full w-full md:w-[40%] flex justify-center items-center overflow-hidden mt-10 md:mt-0"
-        >
-          <motion.div
-            whileHover={{ scale: 1.05, rotate: 2 }}
-            transition={{ type: "spring", stiffness: 200 }}
-            className="large h-[60vw] max-h-[400px] md:h-[80%] w-[80%] rounded-full border-2 border-gray-600 flex justify-center items-center shadow-[0_0_40px_-10px_rgba(255,255,255,0.4)]"
-          >
-            <div className="img h-[90%] w-[90%] rounded-full overflow-hidden">
-              <Image
-                height={400}
-                width={400}
-                src={mine}
-                alt="Syeda Bisma"
-                className="object-cover h-full w-full"
-              />
-            </div>
-          </motion.div>
-        </motion.div>
       </div>
 
       {/* ===== OTHER SECTIONS ===== */}
