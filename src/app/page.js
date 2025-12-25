@@ -93,8 +93,8 @@ const Page = () => {
             </Link>
 
             <a
-              href="/Resume/Resume2.pdf"
-              download="Resume2.pdf"
+              href="/Resume/syedabisma.resume.pdf"
+              download="syedabisma.resume.pdf"
               className="border border-gray-500 w-full sm:w-1/3 text-base sm:text-lg rounded-2xl py-2 px-4 font-medium flex items-center justify-center gap-2 bg-transparent hover:bg-gray-900  hover:text-white hover:scale-105 transition-all duration-300"
             >
               Download Resume
