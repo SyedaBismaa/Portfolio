@@ -11,7 +11,7 @@ const Navbar = () => {
     { href: "/projects", label: "Projects" },
     { href: "https://leetcode.com/u/syedabisma_23/", label: "LeetCode" },
     { href: "https://www.linkedin.com/in/syeda-bisma-29202428a/", label: "LinkedIn" },
-    { href: "https://github.com/SyedaBisma", label: "GitHub" },
+    { href: "https://github.com/SyedaBismaa", label: "GitHub" },
     { href: "https://codolio.com/profile/SyedaBisma", label: "Codolio" },
     { href:"/Resume/Resume2.pdf", download:"Resume2.pdf" , label:"Resume"}
   ];
